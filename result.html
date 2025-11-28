@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI先生｜診断結果</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">AI先生</h1>
+        <p class="subtitle">診断結果</p>
+
+        <div id="result-area" class="description">
+            <!-- JSで内容を生成 -->
+        </div>
+
+        <a href="diagnosis.html" class="start-button">もう一度やる</a>
+        <a href="index.html" class="start-button" style="background:#777;">トップへ戻る</a>
+
+        <p class="footer">© AI先生 わり算つまずき診断</p>
+    </div>
+
+    <script>
+        // URLパラメータ取得
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get("type");
+        const userQ = params.get("q");
+        const userR = params.get("r");
+
+        const correctQ = 5;
+        const correctR = 12;
+
+        const area = document.getElementById("result-area");
+
+        let text = "";
+
+        if (type === "correct") {
+            text = `
+            <h2>🎉 正解だよ！</h2>
+            <p>商 <strong>${userQ}</strong>、あまり <strong>${userR}</strong> は正しいよ！<br>
+            この調子で進もう！</p>`;
+        }
+        else if (type === "wrong_quotient") {
+            text = `
+            <h2>🔍 商がちょっと違うよ</h2>
+            <p>あなたの商：${userQ} ／ 正しい商：${correctQ}</p>
+            <p>商は「14 が 82 に何回入るか？」で求めるよ。</p>`;
+        }
+        else if (type === "wrong_remainder") {
+            text = `
+            <h2>🔍 あまりが少し違うよ</h2>
+            <p>あなたのあまり：${userR} ／ 正しいあまり：${correctR}</p>
+            <p>あまりは「82 − 14 × 商」で計算するよ。</p>`;
+        }
+        else if (type === "both_wrong") {
+            text = `
+            <h2>🛠 両方ちょっと違うよ</h2>
+            <p>商：${userQ}（正解は ${correctQ}）<br>
+               あまり：${userR}（正解は ${correctR}）</p>
+            <p>いっしょに直していこう！</p>`;
+        }
+
+        area.innerHTML = text;
+    </script>
+</body>
+</html>

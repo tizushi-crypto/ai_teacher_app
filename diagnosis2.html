@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI先生｜わり算つまずき診断</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">AI先生</h1>
+        <p class="subtitle">わり算のつまずき診断</p>
+
+        <h2 class="welcome">診断スタート</h2>
+
+        <p class="description">
+            まずは、自分で計算した答えを入力してみよう。間違えていても大丈夫。<br>
+            そこから一緒に直していくよ。
+        </p>
+
+        <p class="description"><strong>今日の問題</strong><br>
+            82 ÷ 14
+        </p>
+
+        <p class="note">
+            ※ 今はおためし版なので、問題は 82 ÷ 14 に固定しています。
+        </p>
+
+        <div class="input-area">
+            <label>あなたの答え（商）</label>
+            <input id="answer_quotient" type="number" placeholder="商を入れてね（たとえば5）">
+
+            <label>あなたの答え（あまり）<br>(あまりがないときは0)</label>
+            <input id="answer_remainder" type="number" placeholder="あまりを入れてね（例：2）">
+        </div>
+
+        <div class="hints">
+            <p>❗ 入力のヒント</p>
+            <ul>
+                <li>たとえば「商5、あまり12」なら「5」と「12」をそれぞれ入れてね。</li>
+                <li>あまりがないときは「0」を入れてOKだよ。</li>
+                <li>間違っていても大丈夫。そこから「つまずき」を見つけるよ。</li>
+            </ul>
+        </div>
+
+        <button onclick="checkAnswer()" class="start-button">診断する</button>
+
+        <p class="footer">© AI先生 わり算つまずき診断</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
