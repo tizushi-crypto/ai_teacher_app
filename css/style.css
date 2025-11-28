@@ -1,0 +1,81 @@
+/* --- 全体レイアウト --- */
+body {
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 680px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* --- タイトル --- */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1a73e8;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.subtitle {
+  font-size: 16px;
+  text-align: center;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+/* --- Welcome 見出し --- */
+.welcome {
+  font-size: 26px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* --- 説明文 --- */
+.description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* --- 特徴リスト --- */
+.features p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* --- 診断ボタン --- */
+.start-button {
+  display: block;
+  width: 70%;
+  text-align: center;
+  margin: 30px auto;
+  padding: 14px 0;
+  background: #1a73e8;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 30px;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.start-button:hover {
+  background: #1558b0;
+  transform: translateY(-2px);
+}
+
+/* --- フッター --- */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 40px;
+}
